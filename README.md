@@ -14,7 +14,7 @@ This project showcases a basic automation script using Selenium WebDriver in Jav
 
 1. **Clone Repository**:
     ```bash
-    git clone https://github.com/your-username/selenium-dynamic-table-automation.git
+    git clone https://github.com/manikgandhi/Demo3/blob/master/Testcase1.java
     ```
    
 2. **Download ChromeDriver**:
