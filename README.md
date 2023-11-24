@@ -1,50 +1,48 @@
-# Demo3
-Basic automation demo done using java with selenium. 
-# Selenium Java Automation for Dynamic Table Interaction
+Selenium Test Case README
+This Selenium test case performs validation of table data on a web page using TestNG.
 
-This project showcases a basic automation script using Selenium WebDriver in Java to interact with a web page featuring dynamic tables.
+Purpose
+The purpose of this test case is to:
 
-## Prerequisites
+Navigate to a specific web page with a dynamic table.
+Retrieve JSON data from a file and input it into a textarea on the web page.
+Click a button to refresh the table.
+Validate the table data against the expected values stored in the JSON file.
+Technologies Used
+Selenium WebDriver
+TestNG
+Java
+ChromeDriver
+Prerequisites
+JDK installed
+TestNG framework installed
+Chrome browser installed
+ChromeDriver compatible with the Chrome browser version
+Test Case Workflow
+Setup:
 
-- Java Development Kit (JDK)
-- Selenium WebDriver Java bindings
-- ChromeDriver
+Ensure the ChromeDriver path is set correctly in the system properties.
+Launch the Chrome browser and maximize the window.
+Navigate to the target web page with the dynamic table.
+Data Input:
 
-## Setup Instructions
+Locate the textarea and clear any existing data.
+Read JSON data from the specified file and input it into the textarea.
+Table Update:
 
-1. **Clone Repository**:
-    ```bash
-    git clone https://github.com/manikgandhi/Demo3/blob/master/Testcase1.java
-    ```
-   
-2. **Download ChromeDriver**:
-   - Download ChromeDriver from [here](https://chromedriver.chromium.org/downloads) and place it in a directory.
-   - Update the path to ChromeDriver in the `System.setProperty` line of `Testcase1.java`:
-     ```java
-     System.setProperty("webdriver.chrome.driver", "path/to/your/chromedriver.exe");
-     ```
+Click the button to refresh the table, updating its content.
+Validation:
 
-3. **Import Project in Eclipse**:
-   - Open Eclipse IDE.
-   - Choose `File` -> `Open Projects from File System`.
-   - Browse and select the cloned project folder.
+Retrieve table rows and columns.
+Validate the data in each row against the expected values defined in the code.
+Verify the data for each row: name, age, and gender.
+Assertions are used to ensure the expected values match the actual values in the table.
+Teardown:
 
-4. **Run the Automation Script**:
-   - Open `Testcase1.java` in Eclipse.
-   - Right-click on the file and select `Run As` -> `Java Application`.
-
-## Description
-
-This script navigates to a webpage with a dynamic table, performs interactions like clicking, inputting JSON data into a textarea, and triggering a button click.
-
-## Structure
-
-- `Testcase1.java`: Contains the main automation script.
-- `README.md`: Instructions and information about the project.
-
-## References
-
-- [Selenium Documentation](https://www.selenium.dev/documentation/en/)
-- [ChromeDriver Documentation](https://chromedriver.chromium.org/documentation)
-
-Feel free to modify and enhance the script as per your requirements.
+Quit the WebDriver, closing the browser session.
+Running the Test Case
+Clone this repository or download the code.
+Ensure the prerequisites are met.
+Update the ChromeDriver path in the code if needed.
+Place the data.json file with the test data in the project directory or update the JSON file path in the code.
+Run the validateTableData() test method within your IDE or testing environment.
